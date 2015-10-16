@@ -34,12 +34,13 @@ public class forwarder {
         if(args.length == 0)
         {
             System.out.println("usage: listen-port destination-host destination-port");
-            System.out.println("example:  8080 www.www.google.com 80");
+            System.out.println("example:  8080 www.www.google.com:80");
             System.exit(0);
         }
     	SOURCE_PORT=Integer.parseInt(args[0]);
-    	DESTINATION_HOST=args[1];
-    	DESTINATION_PORT=Integer.parseInt(args[2]);
+    	DESTINATION_HOST=args[1].split(":")[0];
+    	DESTINATION_PORT=Integer.valueOf(args[1].split(":")[1]);
+    	
     	
     	System.out.println("listen on local port "+SOURCE_PORT);
     	System.out.println("Forwarding to "+DESTINATION_HOST+":"+DESTINATION_PORT);
