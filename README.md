@@ -11,9 +11,9 @@ This is not performance tool! It helps to understand what is going over the netw
 
 usage: 
 
-	In the build folder you will find the jar
-
 java -jar tcpport_forwarder_dumper.jar [local-port] [remote-host]:[remote-port] 
+
+the jar is in the build folder
 
 Example:
 
@@ -26,20 +26,7 @@ TCP Forwarding 127.0.0.1:49793 <--> 216.58.211.36:80 started.
 ------- DATAGRAM ------------
 GET http://www.google.com
 ------- DATAGRAM ------------
-HTTP/1.0 302 Found
-Cache-Control: private
-Content-Type: text/html; charset=UTF-8
-Location: http://www.google.ch/?gfe_rd=cr&ei=51shVrreONSo8weigLKQBg
-Content-Length: 258
-Date: Fri, 16 Oct 2015 20:19:51 GMT
-Server: GFE/2.0
-
-<HTML><HEAD><meta http-equiv="content-type" content="text/html;charset=utf-8">
-<TITLE>302 Moved</TITLE></HEAD><BODY>
-<H1>302 Moved</H1>
-The document has moved
-<A HREF="http://www.google.ch/?gfe_rd=cr&amp;ei=51shVrreONSo8weigLKQBg">here</A>.
-</BODY></HTML>
+&lt;HTML&gt;&lt;HEAD&gt;&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html;charset=utf-8&quot;&gt;<br/>&lt;TITLE&gt;302 Moved&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;<br/>&lt;H1&gt;302 Moved&lt;/H1&gt;<br/>The document has moved<br/>&lt;A HREF=&quot;http://www.google.ch/?gfe_rd=cr&amp;amp;ei=51shVrreONSo8weigLKQBg&quot;&gt;here&lt;/A&gt;.<br/>&lt;/BODY&gt;&lt;/HTML&gt;
 
 TCP Forwarding 127.0.0.1:49793 <--> 216.58.211.36:80 stopped.
  

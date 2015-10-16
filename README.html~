@@ -1,0 +1,114 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title></title>
+	<meta name="generator" content="LibreOffice 4.2.8.2 (Linux)">
+	<meta name="created" content="0;0">
+	<meta name="changedby" content="vesselin ">
+	<meta name="changed" content="20151016;225258495532756">
+	<style type="text/css">
+	<!--
+		@page { margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 120% }
+		pre.cjk { font-family: "Droid Sans Fallback", monospace }
+	-->
+	</style>
+</head>
+<body lang="en-US" dir="ltr">
+<pre class="western"><br>
+</pre>
+<pre class="western">This is very small java program that helps you
+to troubleshoot HTTP, SOAP or RESTful Web services on machines where
+you do not have root privileges (pcap, tcpdump, wireshark)</pre>
+<pre class="western"><br>
+</pre>
+<pre class="western">It makes two things:</pre>
+<pre class="western"><br>
+</pre>
+<pre class="western">   1) Local port forwarding to remote host and
+port, like  local port 8080 to www.google.com:80</pre>
+<pre class="western"><br>
+</pre>
+<pre class="western">   2) Dumps in in and out messages (datagrams)
+to the standard out (stdout)</pre>
+<pre class="western"><br>
+</pre>
+<pre class="western">This is not performance tool! It helps to
+understand what is going over the network, if you do not have root
+privileges for pcap, tcpdump, wireshark etc.</pre>
+<pre class="western"><br>
+</pre>
+<pre class="western">usage: 
+</pre>
+<pre class="western"><br>
+</pre>
+<pre class="western">	(In the build folder, you will find the jar)</pre>
+<pre class="western"><br>
+</pre>
+<pre class="western"><b>java -jar tcpport_forwarder_dumper.jar
+[local-port] [remote-host]:[remote-port] </b>
+</pre>
+<pre class="western"><br>
+</pre>
+<pre class="western">Example:</pre>
+<pre class="western"><br>
+</pre>
+<pre class="western">$ java -jar tcpport_forwarder_dumper.jar 8080
+www.google.com:80</pre>
+<pre class="western"><br>
+</pre>
+<pre class="western"><font size="1" style="font-size: 8pt">TCP Port
+forwarding - content logger (dummper to stdout) v0.1 vesselin</font></pre>
+<pre class="western"><font size="1" style="font-size: 8pt">listen on
+local port 8080</font></pre>
+<pre class="western"><font size="1" style="font-size: 8pt">Forwarding
+to www.google.com:80</font></pre>
+<pre class="western"><font size="1" style="font-size: 8pt">TCP
+Forwarding 127.0.0.1:49793 &lt;--&gt; 216.58.211.36:80 started.</font></pre>
+<pre class="western"><font size="1" style="font-size: 8pt">-------
+DATAGRAM ------------</font></pre>
+<pre class="western"><font size="1" style="font-size: 8pt">GET
+http://www.google.com</font></pre>
+<pre class="western"><font size="1" style="font-size: 8pt">-------
+DATAGRAM ------------</font></pre>
+<pre class="western"><font size="1" style="font-size: 8pt">HTTP/1.0
+302 Found</font></pre>
+<pre class="western"><font size="1" style="font-size: 8pt">Cache-Control:
+private</font></pre>
+<pre class="western"><font size="1" style="font-size: 8pt">Content-Type:
+text/html; charset=UTF-8</font></pre>
+<pre class="western"><font size="1" style="font-size: 8pt">Location:
+http://www.google.ch/?gfe_rd=cr&amp;ei=51shVrreONSo8weigLKQBg</font></pre>
+<pre class="western"><font size="1" style="font-size: 8pt">Content-Length:
+258</font></pre>
+<pre class="western"><font size="1" style="font-size: 8pt">Date: Fri,
+16 Oct 2015 20:19:51 GMT</font></pre>
+<pre class="western"><font size="1" style="font-size: 8pt">Server:
+GFE/2.0</font></pre>
+<pre class="western"><br>
+</pre>
+<pre class="western"><font size="1" style="font-size: 8pt">&lt;HTML&gt;&lt;HEAD&gt;&lt;meta
+http-equiv=&quot;content-type&quot;
+content=&quot;text/html;charset=utf-8&quot;&gt;</font></pre>
+<pre class="western"><font size="1" style="font-size: 8pt">&lt;TITLE&gt;302
+Moved&lt;/TITLE&gt;&lt;/HEAD&gt;&lt;BODY&gt;</font></pre>
+<pre class="western"><font size="1" style="font-size: 8pt">&lt;H1&gt;302
+Moved&lt;/H1&gt;</font></pre>
+<pre class="western"><font size="1" style="font-size: 8pt">The
+document has moved</font></pre>
+<pre class="western"><font size="1" style="font-size: 8pt">&lt;A
+HREF=&quot;http://www.google.ch/?gfe_rd=cr&amp;amp;ei=51shVrreONSo8weigLKQBg&quot;&gt;here&lt;/A&gt;.</font></pre>
+<pre class="western"><font size="1" style="font-size: 8pt">&lt;/BODY&gt;&lt;/HTML&gt;</font></pre>
+<pre class="western"><br>
+</pre>
+<pre class="western"><font size="1" style="font-size: 8pt">TCP
+Forwarding 127.0.0.1:49793 &lt;--&gt; 216.58.211.36:80 stopped.</font></pre>
+<pre class="western"> 
+</pre>
+<pre class="western"><br>
+</pre>
+<pre class="western">  
+</pre>
+</body>
+</html>
